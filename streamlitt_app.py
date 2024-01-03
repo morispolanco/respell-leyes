@@ -19,7 +19,6 @@ def main():
         }
         response = requests.post('https://api.respell.ai/v1/run', headers=headers, json=data)
         result = response.json()
-        st.write(f'```\n{result}\n```')
-
+        st.markdown(f"{result['output']}")
 if __name__ == '__main__':
     main()
